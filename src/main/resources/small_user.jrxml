@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.13.0.final using JasperReports Library version 6.13.0-46ada4d1be8f3c5985fd0b6146f3ed44caed6f05  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="USER_EMAIL_REPORT" pageWidth="155" pageHeight="283" columnWidth="141" leftMargin="7" rightMargin="7" topMargin="7" bottomMargin="7" uuid="3af2a426-8571-4dbf-9d95-4a18be289ff8">
+    <property name="com.jaspersoft.studio.data.sql.tables" value=""/>
+    <property name="com.jaspersoft.studio.data.defaultdataadapter" value="Sample DB"/>
+    <parameter name="createdBy" class="java.lang.String"/>
+    <field name="firstName" class="java.lang.String">
+    </field>
+    <field name="id" class="java.lang.Integer">
+    </field>
+    <field name="lastName" class="java.lang.String">
+    </field>
+    <background>
+        <band splitType="Stretch"/>
+    </background>
+    <title>
+        <band height="52" splitType="Stretch">
+            <property name="com.jaspersoft.studio.layout" value="com.jaspersoft.studio.editor.layout.FreeLayout"/>
+            <image>
+                <reportElement x="6" y="1" width="40" height="40" uuid="a3c98a74-d5c7-4f21-86cc-9488f03c596f"/>
+                <imageExpression>"reportimages/logo.png"</imageExpression>
+            </image>
+            <staticText>
+                <reportElement x="59" y="7" width="82" height="10" uuid="2ac84c91-9f15-4421-97d2-2a5eecb06fe7"/>
+                <textElement textAlignment="Right">
+                    <font fontName="Monospaced" size="8" isBold="true"/>
+                </textElement>
+                <text><![CDATA[Mini Mart For KID]]></text>
+            </staticText>
+            <staticText>
+                <reportElement x="71" y="18" width="70" height="10" uuid="2793ef3e-4abf-4393-b74e-dce3be89bfbd"/>
+                <textElement textAlignment="Right">
+                    <font fontName="Monospaced" size="8" isBold="true"/>
+                </textElement>
+                <text><![CDATA[Reciept]]></text>
+            </staticText>
+            <textField>
+                <reportElement x="46" y="29" width="94" height="10" uuid="2e52e7b5-0b70-4cdf-8d80-eb1115e02439"/>
+                <textElement textAlignment="Right">
+                    <font fontName="Monospaced" size="8" isBold="true"/>
+                </textElement>
+                <textFieldExpression><![CDATA[$P{createdBy}]]></textFieldExpression>
+            </textField>
+            <rectangle>
+                <reportElement x="0" y="47" width="141" height="5" forecolor="#FFFFFF" backcolor="#16A800" uuid="08a647d8-6152-4ee8-a4dc-63a302f7aa0d">
+                    <property name="com.jaspersoft.studio.unit.height" value="px"/>
+                </reportElement>
+            </rectangle>
+        </band>
+    </title>
+    <pageHeader>
+        <band splitType="Stretch"/>
+    </pageHeader>
+    <columnHeader>
+        <band height="21" splitType="Stretch">
+            <staticText>
+                <reportElement x="0" y="2" width="80" height="10" uuid="9ca897eb-9478-4004-806b-7bfe9a493435"/>
+                <textElement>
+                    <font size="8" isBold="true"/>
+                </textElement>
+                <text><![CDATA[ITEM]]></text>
+            </staticText>
+            <staticText>
+                <reportElement x="80" y="2" width="20" height="10" uuid="d6929a31-6a1a-447f-a45d-5f9967a21172"/>
+                <textElement textAlignment="Center">
+                    <font size="8" isBold="true"/>
+                </textElement>
+                <text><![CDATA[QTY]]></text>
+            </staticText>
+            <staticText>
+                <reportElement x="100" y="2" width="41" height="10" uuid="a7aa460b-b5de-44a0-ae6b-a6af28f21853"/>
+                <textElement textAlignment="Right">
+                    <font size="8" isBold="true"/>
+                </textElement>
+                <text><![CDATA[PRICE]]></text>
+            </staticText>
+            <rectangle>
+                <reportElement x="0" y="13" width="141" height="5" forecolor="#FFFFFF" backcolor="#109B26" uuid="65de30e5-4d0f-4c4d-bb4b-5f47cddbebe3">
+                    <property name="com.jaspersoft.studio.unit.height" value="px"/>
+                </reportElement>
+            </rectangle>
+        </band>
+    </columnHeader>
+    <detail>
+        <band height="10" splitType="Stretch">
+            <textField>
+                <reportElement x="0" y="0" width="80" height="10" uuid="9463fdf9-0536-489a-bcc1-a8b957190381"/>
+                <textElement textAlignment="Left">
+                    <font size="8"/>
+                </textElement>
+                <textFieldExpression><![CDATA[$F{firstName}]]></textFieldExpression>
+            </textField>
+            <textField>
+                <reportElement x="80" y="0" width="20" height="10" uuid="024d50ee-5a5d-4534-a7b8-2365e880fad6"/>
+                <textElement textAlignment="Center">
+                    <font size="8"/>
+                </textElement>
+                <textFieldExpression><![CDATA[$F{id}]]></textFieldExpression>
+            </textField>
+            <textField>
+                <reportElement x="100" y="0" width="41" height="10" uuid="a9b4b0ce-da89-4f59-ab83-f9be2841c321"/>
+                <textElement textAlignment="Right">
+                    <font size="8"/>
+                </textElement>
+                <textFieldExpression><![CDATA[$F{lastName}]]></textFieldExpression>
+            </textField>
+        </band>
+    </detail>
+    <columnFooter>
+        <band splitType="Stretch"/>
+    </columnFooter>
+    <pageFooter>
+        <band splitType="Stretch"/>
+    </pageFooter>
+    <summary>
+        <band height="78" splitType="Stretch">
+            <staticText>
+                <reportElement x="0" y="48" width="141" height="30" uuid="de346f7f-a188-4d2c-9fe8-9348c9d899f8"/>
+                <textElement textAlignment="Center">
+                    <font size="6"/>
+                </textElement>
+                <text><![CDATA[(+855) 23 991 314
+minimart4kid@gmail.com
+No. 12, St. 323, Sangkat Boeung Kak II,
+Khan Toul Kork, Phnom Penh, Cambodia]]></text>
+            </staticText>
+            <staticText>
+                <reportElement x="59" y="2" width="41" height="10" uuid="5aae0d40-1e3c-4aeb-8990-d58ada5c3ffc"/>
+                <textElement textAlignment="Right">
+                    <font size="8" isBold="true"/>
+                </textElement>
+                <text><![CDATA[1000]]></text>
+            </staticText>
+            <textField>
+                <reportElement x="100" y="2" width="41" height="10" uuid="98b2fa1d-408f-49f7-9d9f-2a9368dabd71"/>
+                <textElement textAlignment="Right">
+                    <font size="8" isBold="true"/>
+                </textElement>
+                <textFieldExpression><![CDATA[1000]]></textFieldExpression>
+            </textField>
+            <staticText>
+                <reportElement x="46" y="12" width="54" height="10" uuid="6b8b5edc-2bd9-428d-8bad-e0ef98f606e6"/>
+                <textElement textAlignment="Right">
+                    <font size="8" isBold="true"/>
+                </textElement>
+                <text><![CDATA[DISCOUNT]]></text>
+            </staticText>
+            <textField>
+                <reportElement x="100" y="12" width="41" height="10" uuid="72d37073-2ab4-4b38-8c1d-b1829d6e71e2"/>
+                <textElement textAlignment="Right">
+                    <font size="8" isBold="true"/>
+                </textElement>
+                <textFieldExpression><![CDATA[1000]]></textFieldExpression>
+            </textField>
+            <staticText>
+                <reportElement x="20" y="22" width="80" height="10" uuid="4b3e5ef7-d8ea-418e-abc3-f9e74d3053d8"/>
+                <textElement textAlignment="Right">
+                    <font size="8" isBold="true"/>
+                </textElement>
+                <text><![CDATA[GRAND TOTAL]]></text>
+            </staticText>
+            <textField>
+                <reportElement x="100" y="22" width="41" height="10" uuid="e9036d6c-dd54-44b9-9749-dc2c2d99f870"/>
+                <textElement textAlignment="Right">
+                    <font size="8" isBold="true"/>
+                </textElement>
+                <textFieldExpression><![CDATA[100]]></textFieldExpression>
+            </textField>
+        </band>
+    </summary>
+</jasperReport>
